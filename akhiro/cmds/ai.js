@@ -9,8 +9,12 @@ module.exports = {
     author: "Rui",
     aliases: ["chatbot", "talk"],
   },
-  onRun: async ({ api, event, args, fonts }) => {
-    const question = args.join(" ");
+  onMessage: async ({ api, event, args, fonts }) => {
+    const message = event.body.trim().toLowerCase();
+    
+    if (!message.startsWith("ai")) return; // Check if the message starts with "ai"
+    
+    const question = args.slice(1).join(" "); // Remove the "ai" prefix from the question
 
     if (!question) {
       api.sendMessage(

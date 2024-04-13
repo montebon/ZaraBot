@@ -213,8 +213,11 @@ function initializeBot() {
               if (event.body && event.body.toLowerCase() === "prefix") {
                 api.sendMessage(
                   fonts.applyFonts(`
-█▀▀ █░█ █░█ █▀█ █▀▀ █░█ █ █░░ █░░ █▄▄ █▀█ ▀█▀
-█▄▄ █▀█ █▄█ █▀▄ █▄▄ █▀█ █ █▄▄ █▄▄ █▄█ █▄█ ░█░
+──╔╗──────╔╗╔╗
+╔═╣╚╦╦╦╦╦═╣╚╬╬╗╔╗
+║═╣║║║║╔╣═╣║║║╚╣╚╗
+╚═╩╩╩═╩╝╚═╩╩╩╩═╩═╝
+
 ━━━━━━━━━━━━━━━━━━━
 Hello there User, Im Churchillbot. My Prefix Is This [ ${global.AkhiroBot.botPrefix} ]. I Hope You Will Enjoy Using Me, Have Fun. Thanks!
 

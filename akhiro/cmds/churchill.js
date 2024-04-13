@@ -1,10 +1,10 @@
 const axios = require('axios');
 
 module.exports.config = {
-  name: "nica",
+  name: "churchill",
   author: "Rui | LiANE @nealianacagara",
   role: 0,
-  usage: "nica [prompt]",
+  usage: "churchill [prompt]",
 };
 
 module.exports.onRun = async ({ api, event, args }) => {
@@ -16,7 +16,7 @@ module.exports.onRun = async ({ api, event, args }) => {
     if (query) {
       api.setMessageReaction("⏳", event.messageID, (err) => console.log(err), true);
       const processingMessage = await api.sendMessage(
-        `Asking 🔎 Nica. Please wait a moment...`,
+        `Asking 🔎 Churchill. Please wait a moment...`,
         event.threadID
       );
 
@@ -28,7 +28,7 @@ module.exports.onRun = async ({ api, event, args }) => {
         api.setMessageReaction("✅", event.messageID, (err) => console.log(err), true);
         await api.sendMessage({ body: trimmedMessage }, event.threadID, event.messageID);
 
-        console.log(`Sent 🔎 Nica's response to the user`);
+        console.log(`Sent 🔎 chill response to the user`);
       } else {
         throw new Error(`Invalid or missing response from 🔎 Nica API`);
       }
@@ -36,7 +36,7 @@ module.exports.onRun = async ({ api, event, args }) => {
       await api.unsendMessage(processingMessage.messageID);
     }
   } catch (error) {
-    console.error(`❌ | Failed to get 🔎 Nica's response: ${error.message}`);
+    console.error(`❌ | Failed to get 🔎 churchill response: ${error.message}`);
     const errorMessage = `❌ | An error occurred. You can try typing your query again or resending it. There might be an issue with the server that's causing the problem, and it might resolve on retrying.`;
     api.sendMessage(errorMessage, event.threadID);
   }

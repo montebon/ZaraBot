@@ -223,7 +223,7 @@ Churchillbot Is A Botpack File Project Made By churchillDev
 DEVELOPERS OF 𝐂𝐇𝐔𝐑𝐂𝐇𝐈𝐋𝐋𝐁𝐎𝐓:
 - chill ( churchill abing)
 
-YSD: AkhiroBot`, "sans"),
+YSD: Churchillbot`, "sans"),
                   event.threadID,
                   event.messageID,
                 );

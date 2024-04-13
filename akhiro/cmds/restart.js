@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     name: "restart",
-    description: "Restart your akhirobot",
+    description: "Restart your churchillbot",
     role: 1,
     usage: "restart",
     author: "Rui",

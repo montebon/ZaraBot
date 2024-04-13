@@ -217,12 +217,10 @@ function initializeBot() {
 ━━━━━━━━━━━━━━━━━━━
 Hello there User, Im AkhiroBot. My Prefix Is This [ ${global.AkhiroBot.botPrefix} ]. I Hope You Will Enjoy Using Me, Have Fun. Thanks!
 
-AkhiroBot Is A Collab Bot File Project Made By AkhiroDev, LiANE And Yu3Bot, So Please If You Managed To Find This File, Please Don't Abuse This Bot File Project Of Our's.
+Churchillbot Is A Botpack File Project Made By churchillDev
 
-DEVELOPERS OF AKHIROBOT:
-- YueBot ( Rui Reogo )
-- AkhiroDev ( Francis Loyd Raval )
-- LiANE ( Liane Cagara )
+DEVELOPERS OF 𝐂𝐇𝐔𝐑𝐂𝐇𝐈𝐋𝐋𝐁𝐎𝐓:
+- chill ( churchill abing)
 
 YSD: AkhiroBot`, "sans"),
                   event.threadID,

@@ -9,12 +9,8 @@ module.exports = {
     author: "Rui",
     aliases: ["chatbot", "talk"],
   },
-  onMessage: async ({ api, event, args, fonts }) => {
-    const message = event.body.trim().toLowerCase();
-    
-    if (!message.startsWith("ai")) return; // Check if the message starts with "ai"
-    
-    const question = args.slice(1).join(" "); // Remove the "ai" prefix from the question
+  onRun: async ({ api, event, args, fonts }) => {
+    const question = args.join(" ");
 
     if (!question) {
       api.sendMessage(
@@ -32,9 +28,9 @@ module.exports = {
         "bold",
       );
       const formattedReply = fonts.applyFonts(response.reply, "sans");
-      const modifiedReply = `${formattedReply}\n\n𝒕𝒉𝒊𝒔 𝒃𝒐𝒕 𝒘𝒂𝒔 𝒄𝒓𝒆𝒂𝒕𝒆𝒅 𝒃𝒚 𝒄𝒉𝒖𝒓𝒄𝒉𝒊𝒍𝒍\n𝑭𝒃 𝒍𝒊𝒏𝒌 𝒇𝒐𝒍𝒍𝒐𝒘 𝒎𝒐 𝒏𝒂𝒓𝒊𝒏: https://www.facebook.com/Churchill.Dev4100`;
+
       api.sendMessage(
-        `${formattedHeader}\n${modifiedReply}`,
+        `${formattedHeader}\n${formattedReply}`,
         event.threadID,
         event.messageID,
       );
